@@ -58,15 +58,15 @@ const Footer = () => (
     </div>
     <div>
       <a
-        href="https://ihccglobal.org/"
+        href="https://dacglobal.org/"
         className={footerLink}
         target="_blank"
         rel="noopener noreferrer"
       >
-        About IHCC
+        About dac
       </a>
       <a
-        href="https://ihccglobal.org/contact-us/"
+        href="https://dacglobal.org/contact-us/"
         className={footerLink}
         target="_blank"
         rel="noopener noreferrer"

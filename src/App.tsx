@@ -26,8 +26,8 @@ const DisclaimerBanner = () => {
         padding: 10px;
       `}
     >
-      The IHCC Cohort Atlas currently has a combination of real and mock data
-      for demo purposes. The data is not appropriate for research.
+      The dac Cohort Atlas currently has a combination of real and mock data for
+      demo purposes. The data is not appropriate for research.
     </div>
   );
 };
@@ -66,7 +66,7 @@ function App() {
 
   const index = "cohort_centric";
   const graphqlField = "cohort";
-  const projectId = "ihcc";
+  const projectId = "dac";
 
   const authorizationHeader = `Basic ${btoa(API_BASIC_AUTH_PAIR)}`;
 
@@ -94,7 +94,7 @@ function App() {
               align-items: center;
             `}
           >
-            <img alt="IHCC logo" src={logo} className={logoStyle}></img>
+            <img alt="dac logo" src={logo} className={logoStyle}></img>
             International HundredK+ Cohorts Consortium
           </div>
           <div
@@ -104,7 +104,7 @@ function App() {
               color: black;
             `}
           >
-            IHCC Cohort Atlas
+            dac Cohort Atlas
           </div>
         </div>
         <div className={pageContainer}>

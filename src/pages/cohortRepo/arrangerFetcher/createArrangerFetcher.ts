@@ -7,7 +7,7 @@ const createArrangerFetcher = ({
   onUnauthorized = (response: any) => {},
   defaultHeaders = {},
 } = {}) => ({ method = "post", body = {}, headers = {} }) => {
-  const uri = urlJoin(ARRANGER_API, "ihcc/graphql");
+  const uri = urlJoin(ARRANGER_API, "dac/graphql");
   return ajax
     .post(uri, body, {
       headers: {
