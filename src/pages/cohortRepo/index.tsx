@@ -33,7 +33,6 @@ const facetPanelContainer = (collapsed: boolean) => css`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
   min-height: 100%;
 `;
 const body = css`
@@ -50,6 +49,8 @@ const bodyContent = css`
   padding: 18px;
   padding-bottom: 0px;
   & .sqon-view {
+    background-color: #eef5ff;
+    border: none;
     & .sqon-bubble.sqon-value {
       background-color: #1e6e6d;
     }
@@ -78,13 +79,14 @@ const tableContainer = css`
     }
     & .inputWrapper {
       display: none !important;
+      border-color: #b6d1f7;
     }
   }
   & .ReactTable {
     border: none;
     max-height: calc(100vh - 430px);
     & .rt-table {
-      border: solid 1px lightgrey;
+      border: solid 1px #b9b5c6;
       & .rt-td:first-child,
       & .rt-th:first-child {
         /* hides the select checkboxes */
@@ -104,16 +106,31 @@ const tableContainer = css`
             color: #202020;
           }
           &.-sort-asc {
-            box-shadow: inset 0 3px 0 0 #748ea6;
+            box-shadow: inset 0 3px 0 0 #0056b9;
           }
           &.-sort-desc {
-            box-shadow: inset 0 -3px 0 0 #748ea6;
+            box-shadow: inset 0 -3px 0 0 #0056b9;
           }
+        }
+      }
+    }
+    & .-pageJump {
+      border-color: #b9b5c6;
+      & .-pagination_button {
+        font-size: 12px;
+        border-color: #b9b5c6;
+        &.-current {
+          color: #202020;
+          background-color: #eef5ff;
         }
       }
     }
     & .pagination-bottom {
       & .-pagination {
+        select {
+          border-radius: 4px;
+          border: solid 1px #babcc2;
+        }
         padding: 0px;
         height: 45px;
         box-shadow: none;
@@ -125,20 +142,40 @@ const tableContainer = css`
 const facetScroller = (collapsed: boolean) => css`
   overflow: scroll;
   display: flex;
-  ${collapsed
-    ? css`
-        & > * {
-          display: none;
-        }
-      `
-    : ""}
+  ${
+    collapsed
+      ? css`
+          & > * {
+            display: none;
+          }
+        `
+      : ""
+  }
   .aggregation-card {
     border-top: none;
     border-left: none;
     padding: 0px;
     margin: 0px;
-    .textHighlight {
+    & .input-range__track.input-range__track--active {
+      background-color: #6da3f0;
+    }
       word-break: break-word;
+    }
+    .toggle-button-option {
+      border-color: #b5b5b5;
+      &.active {
+        background: #eef5ff;
+      }
+      &:first-child {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-right: none;
+      }
+      &:last-child {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-left: none;
+      }
     }
     & .header {
       & .title-control {
@@ -157,6 +194,7 @@ const facetScroller = (collapsed: boolean) => css`
     }
     & .header .filter .inputWrapper {
       justify-content: unset !important;
+      border-color: #b6d1f7;
       & input {
         max-width: 100%;
       }
@@ -171,13 +209,14 @@ const facetScroller = (collapsed: boolean) => css`
       margin: 0px;
       .title-wrapper {
         padding: 7px;
-        background-color: #e8e8f0;
+        background-color: white;
         color: #202020;
+        border-bottom: none;
         & .title {
           margin-right: 10px;
           font-size: 12px;
           font-weight: bold;
-          color: #202020;
+          color: #011028;
         }
         &.collapsed {
           & > .arrow {
@@ -188,12 +227,12 @@ const facetScroller = (collapsed: boolean) => css`
     }
     & .showMore-wrapper {
       & ::before {
-        color: #47a8bd;
+        color: #0056b9;
       }
-      color: #202020;
+      color: #0056b9;
       margin-top: 0px;
       padding-left: 8px;
-      justify-content: flex-start;
+      justify-content: flex-end;
     }
     .filter {
       padding-left: 5px;

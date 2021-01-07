@@ -60,7 +60,7 @@ export default ({ sqon }: { sqon: {} | null }) => {
       indexBy="country"
       margin={{ top: 10, right: 0, bottom: 80, left: 0 }}
       padding={0.3}
-      colors={["#47a8bd"]}
+      colors={["#0056b9"]}
       enableGridY={false}
       defs={[
         {
