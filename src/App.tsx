@@ -2,12 +2,12 @@ import React from "react";
 import { Router, Route, Switch } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import CohortRepo from "./pages/cohortRepo";
-import logo from "./logo.png";
 import { css } from "emotion";
 import { ARRANGER_API, SHOW_COHORT_REPO_DISCLAIMER } from "./config";
 import urlJoin from "url-join";
 import { API_BASIC_AUTH_PAIR, MAINTENANCE_MODE } from "./config";
 import createArrangerFetcher from "./pages/cohortRepo/arrangerFetcher/createArrangerFetcher";
+import Header from "./components/Header";
 
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "@apollo/react-hooks";
@@ -40,25 +40,6 @@ function App() {
     display: flex;
     flex-direction: column;
   `;
-  const headerStyle = css`
-    height: 64px;
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.04;
-    letter-spacing: normal;
-    color: #191970;
-    background: white;
-    border-bottom: solid 2px #dcdde1;
-    width: 100%;
-    justify-content: space-between;
-  `;
-  const logoStyle = css`
-    width: 142px;
-  `;
   const pageContainer = css`
     position: relative;
     flex: 1;
@@ -87,26 +68,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <div className={fullView}>
-        <div className={headerStyle}>
-          <div
-            className={css`
-              display: flex;
-              align-items: center;
-            `}
-          >
-            <img alt="dac logo" src={logo} className={logoStyle}></img>
-            International HundredK+ Cohorts Consortium
-          </div>
-          <div
-            className={css`
-              text-align: right;
-              margin-right: 10px;
-              color: black;
-            `}
-          >
-            dac Cohort Atlas
-          </div>
-        </div>
+        <Header />
         <div className={pageContainer}>
           {MAINTENANCE_MODE && <MaintenancePageContent />}
           {!MAINTENANCE_MODE && (

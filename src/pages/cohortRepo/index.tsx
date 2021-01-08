@@ -17,7 +17,8 @@ import {
 } from "@arranger/components/dist/Arranger";
 import "@arranger/components/public/themeStyles/beagle/beagle.css";
 import createArrangerFetcher from "./arrangerFetcher/createArrangerFetcher";
-import Footer from "../../components/Footer";
+import Footer from "../../components";
+import plusSign from "./assets/plus@2x.png";
 
 const pageContainer = css`
   display: flex;
@@ -52,10 +53,14 @@ const bodyContent = css`
     background-color: #eef5ff;
     border: none;
     & .sqon-bubble.sqon-value {
-      background-color: #1e6e6d;
+      background-color: #011028;
+    }
+    & .sqon-value-group {
+      color: #0056b9;
     }
     & .sqon-bubble.sqon-clear {
-      color: #191970;
+      border-color: #0056b9;
+      color: #0056b9;
     }
   }
 `;
@@ -240,6 +245,22 @@ const facetScroller = (collapsed: boolean) => css`
     }
     .bucket {
       padding: 3px 5px 5px 5px;
+    }
+    .showMore-wrapper {
+      ::before {
+        transform: scale(0.5);
+        margin-right: 0px;
+      }
+      &.more {
+        ::before {
+          content: url(${plusSign});
+        }
+      }
+      &.less {
+        ::before {
+          content: url(${plusSign});
+        }
+      }
     }
   }
 `;
