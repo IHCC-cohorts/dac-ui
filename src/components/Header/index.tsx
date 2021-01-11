@@ -5,7 +5,7 @@ import background from "./DAC-header-background.jpg";
 
 const Header = () => {
   const headerStyle = css`
-    height: 64px;
+    min-height: 64px;
     display: flex;
     position: relative;
     align-items: center;
