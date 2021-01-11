@@ -9,7 +9,8 @@ const container = css`
   display: flex;
   position: relative;
   margin-top: 10px;
-  border: solid 1px #d9d9df;
+  border-top: solid 1px #0056b9;
+  border-bottom: solid 1px #0056b9;
   padding: 8px;
 `;
 const chartContainer = css`
@@ -21,7 +22,7 @@ const chartContainer = css`
 const chartTitleStyle = css`
   font-size: 12px;
   font-weight: bold;
-  color: #202020;
+  color: #0056b9;
 `;
 
 export default ({ sqon }: { sqon: {} | null }) => {
