@@ -53,6 +53,9 @@ const bodyContent = css`
   & .sqon-view {
     background-color: #eef5ff;
     border: none;
+    & .sqon-more {
+      line-height: 9px;
+    }
     & .sqon-bubble.sqon-value {
       background-color: #011028;
     }
@@ -116,6 +119,9 @@ const tableContainer = css`
           }
           &.-sort-desc {
             box-shadow: inset 0 -3px 0 0 #0056b9;
+          }
+          &:focus {
+            outline: none;
           }
         }
       }
