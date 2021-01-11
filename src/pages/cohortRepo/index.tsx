@@ -18,7 +18,8 @@ import {
 import "@arranger/components/public/themeStyles/beagle/beagle.css";
 import createArrangerFetcher from "./arrangerFetcher/createArrangerFetcher";
 import Footer from "../../components";
-import plusSign from "./assets/plus@2x.png";
+import plusSign from "./assets/icon-plus.svg";
+import minusSign from "./assets/icon-minus.svg";
 
 const pageContainer = css`
   display: flex;
@@ -258,7 +259,7 @@ const facetScroller = (collapsed: boolean) => css`
       }
       &.less {
         ::before {
-          content: url(${plusSign});
+          content: url(${minusSign});
         }
       }
     }
