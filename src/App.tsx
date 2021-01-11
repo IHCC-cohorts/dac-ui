@@ -26,7 +26,7 @@ const DisclaimerBanner = () => {
         padding: 10px;
       `}
     >
-      The dac Cohort Atlas currently has a combination of real and mock data for
+      The DAC Cohort Atlas currently has a combination of real and mock data for
       demo purposes. The data is not appropriate for research.
     </div>
   );
