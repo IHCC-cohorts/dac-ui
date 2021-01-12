@@ -237,15 +237,6 @@ const facetScroller = (collapsed: boolean) => css`
         }
       }
     }
-    & .showMore-wrapper {
-      & ::before {
-        color: #0056b9;
-      }
-      color: #0056b9;
-      margin-top: 0px;
-      padding-left: 8px;
-      justify-content: flex-end;
-    }
     .filter {
       padding-left: 5px;
       padding-right: 5px;
@@ -254,6 +245,11 @@ const facetScroller = (collapsed: boolean) => css`
       padding: 3px 5px 5px 5px;
     }
     .showMore-wrapper {
+      color: #0056b9;
+      margin-top: 0px;
+      padding-left: 8px;
+      justify-content: flex-end;
+      white-space: nowrap;
       ::before {
         transform: scale(0.5);
         margin-right: 0px;
