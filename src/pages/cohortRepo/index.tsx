@@ -341,6 +341,7 @@ type CohortDocument = {
     environmental_data: boolean;
     genomic_data: boolean;
     phenotypic_clinical_data: boolean;
+    ehr_data: boolean;
   };
   pi_lead: string;
 };
@@ -462,6 +463,22 @@ const customTableColumns = [
         <BooleanCell
           isTrue={original.available_data_types.phenotypic_clinical_data}
         />
+      ),
+    },
+  },
+  {
+    index: 3,
+    content: {
+      accessor: "available_data_types.ehr_data",
+      resizable: false,
+      width: 60,
+      Header: (
+        <>
+          EHR <br /> Data
+        </>
+      ),
+      Cell: ({ original }: { original: CohortDocument }) => (
+        <BooleanCell isTrue={original.available_data_types.ehr_data} />
       ),
     },
   },
