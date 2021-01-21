@@ -26,7 +26,7 @@ const footerSponsor = css`
 `;
 const footerLink = css`
   margin: 10px;
-  color: #47478d;
+  color: #0056b9;
 `;
 const sponsorLogo = css`
   width: 100px;
@@ -58,15 +58,15 @@ const Footer = () => (
     </div>
     <div>
       <a
-        href="https://dacglobal.org/"
+        href="https://www.davosalzheimerscollaborative.org/"
         className={footerLink}
         target="_blank"
         rel="noopener noreferrer"
       >
-        About dac
+        About DAC
       </a>
       <a
-        href="https://dacglobal.org/contact-us/"
+        href="https://www.davosalzheimerscollaborative.org/contact-us/"
         className={footerLink}
         target="_blank"
         rel="noopener noreferrer"
@@ -74,7 +74,7 @@ const Footer = () => (
         Contact Us
       </a>
     </div>
-    <div>© 2020 International HundredK+ Cohorts Consortium</div>
+    <div>©2021 Davos Alzheimer’s Collaborative</div>
   </div>
 );
 
