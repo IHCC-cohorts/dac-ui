@@ -17,7 +17,7 @@ import {
 } from "@arranger/components/dist/Arranger";
 import "@arranger/components/public/themeStyles/beagle/beagle.css";
 import createArrangerFetcher from "./arrangerFetcher/createArrangerFetcher";
-import Footer from "../../components";
+import Footer from "../../components/Footer";
 import plusSign from "./assets/icon-plus.svg";
 import minusSign from "./assets/icon-minus.svg";
 
