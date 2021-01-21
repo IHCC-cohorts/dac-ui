@@ -22,6 +22,7 @@ const chartContainer = css`
 const chartTitleStyle = css`
   font-size: 12px;
   font-weight: bold;
+  font-family: 'Acumin Variable Concept', sans-serif;
   color: #0056b9;
 `;
 
