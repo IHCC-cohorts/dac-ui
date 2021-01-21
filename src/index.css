@@ -37,3 +37,7 @@ body .aggregation-card .title-wrapper .title  {
   font-family: 'Acumin Variable Concept', sans-serif;
   font-size: 12px;
 }
+
+.sqon-op div {
+  color: #343434;
+}
