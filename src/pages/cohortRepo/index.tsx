@@ -472,7 +472,7 @@ const customTableColumns = [
     content: {
       accessor: "available_data_types.longitudinal_data",
       resizable: false,
-      width: 60,
+      width: 90,
       Header: (
         <>
           Longitudinal <br /> Data
@@ -488,7 +488,7 @@ const customTableColumns = [
     content: {
       accessor: "available_data_types.ehr_data",
       resizable: false,
-      width: 60,
+      width: 48,
       Header: (
         <>
           EHR <br /> Data
